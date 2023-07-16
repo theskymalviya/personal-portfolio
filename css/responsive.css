@@ -1,0 +1,310 @@
+/* responsive  */
+@media (max-width: 1199px) {
+  .home-img .img-box,
+  .circle {
+    width: 350px;
+    height: 350px;
+  }
+
+  .about-img .img-box {
+    width: 250px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    /* font size  */
+    --fs-4xl: 40px;
+    --fs-3xl: 30px;
+    --fs-2xl: 24px;
+  }
+
+  .skills .skill {
+    width: calc(100% / 4 - 30px);
+  }
+}
+
+@media (max-width: 991px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .home-img .img-box,
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-img .img-box {
+    width: 200px;
+    height: 220px;
+  }
+
+  .skills .skill {
+    width: calc(100% / 3 - 30px);
+  }
+
+  .portfolio-item {
+    width: calc(100% / 2 - 30px);
+  }
+
+  .portfolio-popup .img2,
+  .portfolio-popup .img3 {
+    display: none;
+  }
+
+  .popup-img,
+  .popup-text {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+  }
+
+  .popup-text {
+    padding: 30px 0 30px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* font size  */
+    --fs-4xl: 35px;
+    --fs-3xl: 25px;
+    --fs-2xl: 20px;
+    --fs-xl: 18px;
+    --fs-lg: 16px;
+    --fs-md: 14px;
+    --fs-sm: 12px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .switcher-body {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .switcher-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .switch-item .dark-mode {
+    width: 35px;
+    height: 18px;
+  }
+
+  .switch-item .dark-mode::after {
+    width: 12px;
+    height: 12px;
+    top: 1;
+  }
+
+  .switch-item input:checked + .dark-mode::after {
+    left: calc(100% - 16px);
+  }
+
+  .home-text,
+  .home-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-text {
+    order: 2;
+  }
+
+  .home-section .row {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 50px;
+  }
+
+  .home-text .btn:last-child {
+    margin-right: 0;
+  }
+
+  .about-img,
+  .about-text {
+    width: 100%;
+    height: initial;
+    padding: 0;
+  }
+
+  .about-section {
+    overflow-y: auto;
+  }
+  .about-section .container {
+    overflow: initial;
+  }
+
+  .about-text {
+    overflow: initial;
+    padding: 0 0 20px;
+  }
+
+  .about-text .desc {
+    margin-top: 20px;
+  }
+  .tab-body .tab-item p {
+    width: 100%;
+  }
+
+  .skills {
+    margin: 20px 0;
+  }
+
+  .portfolio-item {
+    width: calc(100% / 1 - 30px);
+  }
+
+  .portfolio-body p {
+    margin-bottom: 30px;
+  }
+
+  .portfolio-body ul li {
+    margin-bottom: 30px;
+  }
+
+  .contact-form,
+  .contact-text {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .input-group {
+    margin: 0 0 30px;
+  }
+
+  .contact-form {
+    margin: 0 0 40px;
+  }
+  
+  .contact-item:last-child{
+    margin: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    /* font size  */
+    --fs-4xl: 28px;
+    --fs-3xl: 22px;
+    --fs-2xl: 18px;
+    --fs-xl: 16px;
+    --fs-lg: 14px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .bg-overlay-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .header {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .nav {
+    height: 100vh;
+  }
+
+  .home-text .btn {
+    margin: 30px 20px 0 0;
+  }
+
+  .home-img .img-box,
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .home-section .row {
+    row-gap: 35px;
+  }
+
+  .home-text h1 {
+    margin: 10px 0 20px;
+  }
+
+  .tab-body .tab-item .date::before {
+    width: 10px;
+    height: 10px;
+    left: -24px;
+  }
+
+  .tab-body {
+    padding: 0 0 0 20px;
+  }
+
+  .tab {
+    margin: 30px 30px 10px 0;
+  }
+
+  .about-text .btn {
+    margin: 10px 10px 10px;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .skills .skill {
+    width: calc(100% / 2 - 30px);
+  }
+
+  .popup-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .close-div {
+    width: 100%;
+    top: 0;
+  }
+
+  .portfolio-body ul {
+    padding: 0 0 0 20px;
+  }
+
+  .portfolio-body h2 {
+    margin-bottom: 10px;
+  }
+
+  .popup-text {
+    padding: 15px 0 20px;
+  }
+
+  .popup-img,
+  .popup-text {
+    margin: 0;
+  }
+
+  .popup-body .row {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-form,
+  .contact-text {
+    width: 100%;
+    padding: 0;
+  }
+}

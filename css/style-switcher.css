@@ -1,0 +1,178 @@
+/* style switcher  */
+.style-switcher{
+  position: fixed;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  top: 20%;
+  right: 0;
+  background-color: transparent;
+  z-index: 999;
+}
+
+.switcher-body {
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 280px;
+  backdrop-filter: blur(5px);
+  visibility: hidden;
+  transform: scale(0.1); /* Initial scale set to 0.5 */
+  transform-origin: top right; /* Set the transform origin */
+  transition: transform 0.3s linear, visibility 0s linear 0.3s; /* Added transitions for transform and visibility */
+}
+
+.switcher-body.open {
+  visibility: visible;
+  transform: scale(1); /* Scale set to 1 when open */
+  transition: transform 0.3s linear, visibility 0s linear; /* Added transition for transform and removed visibility delay */
+}
+
+.switcher-body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-bg-color);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  opacity: 0.8;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.switcher-toggle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color);
+  color: var(--text-white);
+  font-size: var(--fs-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 0 0 8px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+  opacity: 0.8;
+}
+.switcher-toggle:hover{
+  opacity: 1;
+}
+.switcher-toggle.hide {
+  opacity: 0;
+}
+
+.switch-item .row {
+  gap: 15px;
+}
+
+.switch-item .color-pick {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.switch-item .color-pick:hover{
+    box-shadow: var(--focus-shadow);
+}
+
+.switch-item .color-pick:nth-of-type(1) {
+  background-color: hsl(0, var(--saturation), var(--lightness));
+}
+
+.switch-item .color-pick:nth-of-type(2) {
+  background-color: hsl(160, var(--saturation), var(--lightness));
+}
+
+.switch-item .color-pick:nth-of-type(3) {
+  background-color: hsl(180, var(--saturation), var(--lightness));
+}
+
+.switch-item .color-pick:nth-of-type(4) {
+  background-color: hsl(190, var(--saturation), var(--lightness));
+}
+
+.switch-item .color-pick:nth-of-type(5) {
+  background-color: hsl(206, var(--saturation), var(--lightness));
+}
+.switch-item .color-pick:nth-of-type(6) {
+  background-color: hsl(260, var(--saturation), var(--lightness));
+}
+.switch-item .color-pick:nth-of-type(7) {
+  background-color: hsl(340, var(--saturation), var(--lightness));
+}
+
+.switch-item p {
+  text-transform: capitalize;
+  color: var(--main-color);
+  font-weight: 400;
+}
+
+.switch-item label{
+    text-transform: capitalize;
+}
+
+.switch-item {
+  padding: 0 0 20px;
+}
+
+.switch-item + .switch-item {
+  border-top: 1px solid var(--border-color);
+  padding: 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch-item input {
+  opacity: 0;
+}
+
+.switch-item input:focus + .dark-mode{
+    box-shadow: var(--focus-shadow);
+}
+
+.switch-item .dark-mode {
+  width: 40px;
+  height: 20px;
+  border: 1px solid var(--border-color);
+  display: inline-block;
+  border-radius: 10px;
+  position: relative;
+  background-color: var(--bg-white);
+  transition: background-color 0.3s ease;
+}
+
+.switch-item .dark-mode::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  top: 2px;
+  left: 4px;
+  transition: left 0.3s ease;
+  z-index: 1;
+  background-color: var(--bg-white);
+}
+.switch-item input:checked + .dark-mode::after {
+  left: calc(100% - 18px);
+}
+
+.switch-item input:checked + .dark-mode {
+  background-color: var(--main-color);
+}
+
+.switch-item input:checked + .dark-mode {
+  outline: var(--focus-shadow);
+}
+
+
