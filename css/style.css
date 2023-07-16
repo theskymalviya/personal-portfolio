@@ -4,7 +4,7 @@
 /* variables  */
 :root {
   /* colors */
-  --hue: 180;
+  --hue: 200;
   --saturation: 70%;
   --lightness: 50%;
   --main-color: hsl(var(--hue), var(--saturation), var(--lightness));
